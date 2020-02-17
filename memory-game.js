@@ -53,7 +53,7 @@ flipCard.addEventListener("click", function(event) {
     var highScore = localStorage.getItem("highScore");
     var scoreElement = document.getElementById("score");
     var currentGameScore = parseInt(scoreElement.innerText);
-    if (highScore === undefined || currentGameScore < highScore) {
+    if (highScore === null || currentGameScore < highScore) {
       localStorage.setItem("highScore", currentGameScore);
     }
   }
